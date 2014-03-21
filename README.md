@@ -1,4 +1,4 @@
-Gitter.im Services
+Gitter.im Services [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/gitterHQ/services)
 ==================
 The things that power your Gitter activity feed.
 
