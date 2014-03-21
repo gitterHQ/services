@@ -1,0 +1,10 @@
+{
+  "name": "webhooks-handler",
+  "url": "job/webhooks-handler/",
+  "build": {
+    "full_url": "http://beta-internal:8080/job/webhooks-handler/6/",
+    "number": 6,
+    "phase": "STARTED",
+    "url": "job/webhooks-handler/6/"
+  }
+}
