@@ -1,8 +1,11 @@
+var fs = require("fs");
+
 var services = {};
 
-require("fs").readdirSync(__dirname+"/lib").forEach(function(file) {
-  var serviceName = file.split('.')[0];
-  services[serviceName] = require("./lib/" + serviceName);
+fs.readdirSync(__dirname+"/lib").forEach(function(file) {
+  if(fs.statSync(__dirname+"/lib/"+file).isDirectory()) {
+    services[file] = require("./lib/" + file);
+  }
 });
 
 module.exports = services;
