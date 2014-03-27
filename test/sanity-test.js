@@ -27,6 +27,27 @@ describe('sanity tests:', function() {
         assert.equal(typeof service.instructions, 'string');
         assert(service.instructions.length > 0);
       });
+
+      describe('icons', function() {
+        it('has a logo', function() {
+          assert(service.icons.logo, serviceName+'.icons.logo doesnt exist');
+        });
+
+        Object.keys(service.icons).forEach(function(iconName) {
+          describe(iconName, function() {
+            var iconSet = service.icons[iconName];
+
+            it('has a legacy icon', function() {
+              assert(iconSet.legacy, serviceName+'.icons.'+iconName+'.legacy doesnt exist');
+            });
+
+            it('has a retina icon', function() {
+              assert(iconSet.retina, serviceName+'.icons.'+iconName+'.retina doesnt exist');
+            });
+          });
+        });
+      });
+
     });
   });
 });
