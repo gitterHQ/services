@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/gitterHQ/services/issues"
   },
-  "homepage": "https://github.com/gitterHQ/services"
+  "homepage": "https://github.com/gitterHQ/services",
+  "dependencies": {
+    "require-all": "0.0.8"
+  }
 }

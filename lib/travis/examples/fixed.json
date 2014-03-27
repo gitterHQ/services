@@ -1,0 +1,90 @@
+{
+  "headers": {},
+  "body": {
+    "id": 17283626,
+    "repository": {
+      "id": 1507159,
+      "name": "hook",
+      "owner_name": "malditogeek",
+      "url": "https://github.com/malditogeek/hook"
+    },
+    "number": "55",
+    "config": {
+      "language": "node_js",
+      "node_js": [
+        "0.10"
+      ],
+      "script": [
+        "/bin/bash ./make.sh"
+      ],
+      "notifications": {
+        "webhooks": {
+          "urls": [
+            "https://kcmbpmcwov.localtunnel.me/e/1803622a0d6ebc3df13b"
+          ],
+          "on_success": "always",
+          "on_failure": "always",
+          "on_start": true
+        }
+      },
+      ".result": "configured"
+    },
+    "status": 0,
+    "result": 0,
+    "status_message": "Fixed",
+    "result_message": "Fixed",
+    "started_at": "2014-01-20T15:58:31Z",
+    "finished_at": "2014-01-20T15:58:47Z",
+    "duration": 16,
+    "build_url": "https://travis-ci.org/malditogeek/hook/builds/17283626",
+    "commit": "55a97f5edcda8cdfa92c496b0be42c0855b9fa6d",
+    "branch": "master",
+    "message": "kk fixed",
+    "compare_url": "https://github.com/malditogeek/hook/compare/23293866f562...55a97f5edcda",
+    "committed_at": "2014-01-20T15:57:39Z",
+    "author_name": "Mauro Pompilio",
+    "author_email": "hackers.are.rockstars@gmail.com",
+    "committer_name": "Mauro Pompilio",
+    "committer_email": "hackers.are.rockstars@gmail.com",
+    "matrix": [
+      {
+        "id": 17283627,
+        "repository_id": 1507159,
+        "parent_id": 17283626,
+        "number": "55.1",
+        "state": "finished",
+        "config": {
+          "language": "node_js",
+          "node_js": "0.10",
+          "script": [
+            "/bin/bash ./make.sh"
+          ],
+          "notifications": {
+            "webhooks": {
+              "urls": [
+                "https://kcmbpmcwov.localtunnel.me/e/1803622a0d6ebc3df13b"
+              ],
+              "on_success": "always",
+              "on_failure": "always",
+              "on_start": true
+            }
+          },
+          ".result": "configured"
+        },
+        "status": null,
+        "result": null,
+        "commit": "55a97f5edcda8cdfa92c496b0be42c0855b9fa6d",
+        "branch": "master",
+        "message": "kk fixed",
+        "compare_url": "https://github.com/malditogeek/hook/compare/23293866f562...55a97f5edcda",
+        "committed_at": "2014-01-20T15:57:39Z",
+        "author_name": "Mauro Pompilio",
+        "author_email": "hackers.are.rockstars@gmail.com",
+        "committer_name": "Mauro Pompilio",
+        "committer_email": "hackers.are.rockstars@gmail.com",
+        "finished_at": "2014-01-20T15:58:47Z"
+      }
+    ],
+    "type": "push"
+  }
+}

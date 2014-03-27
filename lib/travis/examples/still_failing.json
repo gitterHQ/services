@@ -1,0 +1,90 @@
+{
+  "headers": {},
+  "body": {
+    "id": 17278860,
+    "repository": {
+      "id": 1507159,
+      "name": "hook",
+      "owner_name": "malditogeek",
+      "url": "https://github.com/malditogeek/hook"
+    },
+    "number": "54",
+    "config": {
+      "language": "node_js",
+      "node_js": [
+        "0.10"
+      ],
+      "script": [
+        "/bin/bash ./make.sh"
+      ],
+      "notifications": {
+        "webhooks": {
+          "urls": [
+            "https://geoqatmteu.localtunnel.me/e/1803622a0d6ebc3df13b"
+          ],
+          "on_success": "always",
+          "on_failure": "always",
+          "on_start": true
+        }
+      },
+      ".result": "configured"
+    },
+    "status": 1,
+    "result": 1,
+    "status_message": "Still Failing",
+    "result_message": "Still Failing",
+    "started_at": "2014-01-20T14:33:49Z",
+    "finished_at": "2014-01-20T14:34:04Z",
+    "duration": 15,
+    "build_url": "https://travis-ci.org/malditogeek/hook/builds/17278860",
+    "commit": "23293866f562772696e5c61df6f6fa3abe0b1114",
+    "branch": "master",
+    "message": "derp",
+    "compare_url": "https://github.com/malditogeek/hook/compare/8271139204b9...23293866f562",
+    "committed_at": "2014-01-20T14:33:08Z",
+    "author_name": "Mauro Pompilio",
+    "author_email": "hackers.are.rockstars@gmail.com",
+    "committer_name": "Mauro Pompilio",
+    "committer_email": "hackers.are.rockstars@gmail.com",
+    "matrix": [
+      {
+        "id": 17278861,
+        "repository_id": 1507159,
+        "parent_id": 17278860,
+        "number": "54.1",
+        "state": "finished",
+        "config": {
+          "language": "node_js",
+          "node_js": "0.10",
+          "script": [
+            "/bin/bash ./make.sh"
+          ],
+          "notifications": {
+            "webhooks": {
+              "urls": [
+                "https://geoqatmteu.localtunnel.me/e/1803622a0d6ebc3df13b"
+              ],
+              "on_success": "always",
+              "on_failure": "always",
+              "on_start": true
+            }
+          },
+          ".result": "configured"
+        },
+        "status": null,
+        "result": null,
+        "commit": "23293866f562772696e5c61df6f6fa3abe0b1114",
+        "branch": "master",
+        "message": "derp",
+        "compare_url": "https://github.com/malditogeek/hook/compare/8271139204b9...23293866f562",
+        "committed_at": "2014-01-20T14:33:08Z",
+        "author_name": "Mauro Pompilio",
+        "author_email": "hackers.are.rockstars@gmail.com",
+        "committer_name": "Mauro Pompilio",
+        "committer_email": "hackers.are.rockstars@gmail.com",
+        "finished_at": "2014-01-20T14:34:04Z"
+      }
+    ],
+    "type": "push"
+  }
+}
