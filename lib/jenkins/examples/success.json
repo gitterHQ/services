@@ -1,11 +1,14 @@
 {
-  "name": "webhooks-handler",
-  "url": "job/webhooks-handler/",
-  "build": {
-    "full_url": "http://beta-internal:8080/job/webhooks-handler/6/",
-    "number": 6,
-    "phase": "FINISHED",
-    "status": "SUCCESS",
-    "url": "job/webhooks-handler/6/"
+  "headers": {},
+  "body": {
+    "name": "webhooks-handler",
+    "url": "job/webhooks-handler/",
+    "build": {
+      "full_url": "http://beta-internal:8080/job/webhooks-handler/6/",
+      "number": 6,
+      "phase": "FINISHED",
+      "status": "SUCCESS",
+      "url": "job/webhooks-handler/6/"
+    }
   }
 }

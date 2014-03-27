@@ -6,7 +6,7 @@ var examples = jenkins.examples;
 describe('Jenkins', function() {
 
   it('should generate a failure message', function() {
-    var body = examples['failure'];
+    var body = examples['failure'].body;
     var hook = {
       settings: {
         events: ['failure']
@@ -16,7 +16,7 @@ describe('Jenkins', function() {
   });
 
   it('should generate a success message', function() {
-    var body = examples['success'];
+    var body = examples['success'].body;
     var hook = {
       settings: {
         events: ['success']
@@ -26,7 +26,7 @@ describe('Jenkins', function() {
   });
 
   it('should generate a start message', function() {
-    var body = examples['started'];
+    var body = examples['started'].body;
     var hook = {
       settings: {
         events: ['started']
@@ -36,7 +36,7 @@ describe('Jenkins', function() {
   });
 
   it('shouldnt generate a start message if im not listening to that event', function() {
-    var body = examples['started'];
+    var body = examples['started'].body;
     var hook = {
       settings: {
         events: ['success']
@@ -46,7 +46,7 @@ describe('Jenkins', function() {
   });
 
   it('shouldnt generate a message for completed jobs', function() {
-    var body = examples['completed'];
+    var body = examples['completed'].body;
     var hook = {
       settings: {
         events: ['started', 'success', 'failure']

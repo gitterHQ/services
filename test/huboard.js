@@ -5,7 +5,7 @@ var examples = huboard.examples;
 
 describe('HuBoard', function() {
   it('should parse an issue opened event', function() {
-    var body = examples['issue_opened'];
+    var body = examples['issue_opened'].body;
     var hook = {
       settings: {
         events: ['issue_opened_or_closed']
@@ -15,7 +15,7 @@ describe('HuBoard', function() {
   });
 
   it('should parse an issue blocked event', function() {
-    var body = examples['issue_status_changed_blocked'];
+    var body = examples['issue_status_changed_blocked'].body;
     var hook = {
       settings: {
         events: ['issue_status_changed']
@@ -25,7 +25,7 @@ describe('HuBoard', function() {
   });
 
   it('should parse an issue ready event', function() {
-    var body = examples['issue_status_changed_ready'];
+    var body = examples['issue_status_changed_ready'].body;
     var hook = {
       settings: {
         events: ['issue_status_changed']
@@ -35,7 +35,7 @@ describe('HuBoard', function() {
   });
 
   it('should parse an issue unready event', function() {
-    var body = examples['issue_status_changed_unready'];
+    var body = examples['issue_status_changed_unready'].body;
     var hook = {
       settings: {
         events: ['issue_status_changed']
@@ -45,7 +45,7 @@ describe('HuBoard', function() {
   });
 
   it('should parse a milestone changed event', function() {
-    var body = examples['milestone_changed'];
+    var body = examples['milestone_changed'].body;
     var hook = {
       settings: {
         events: ['milestone_changed']
@@ -55,7 +55,7 @@ describe('HuBoard', function() {
   });
 
   it('should parse a moved event', function() {
-    var body = examples['moved'];
+    var body = examples['moved'].body;
     var hook = {
       settings: {
         events: ['moved']
