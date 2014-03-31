@@ -6,53 +6,74 @@ var examples = jenkins.examples;
 describe('Jenkins', function() {
 
   it('should generate a failure message', function() {
-    var body = examples['failure'].body;
+    var payload = examples['failure'];
     var hook = {
       settings: {
         events: ['failure']
       }
     };
-    assert.equal(parse({}, body, hook).message, 'Job webhooks-handler finished with status: failure');
+
+    var response = parse(payload.headers, payload.body, hook);
+
+    assert.equal(response.message, 'Jenkins [webhooks-handler](http://beta-internal:8080/job/webhooks-handler/6/) failure');
+    assert.equal(response.icon, 'frown');
+    assert.equal(response.errorLevel, 'error');
   });
 
   it('should generate a success message', function() {
-    var body = examples['success'].body;
+    var payload = examples['success'];
     var hook = {
       settings: {
         events: ['success']
       }
     };
-    assert.equal(parse({}, body, hook).message, 'Job webhooks-handler finished with status: success');
+
+    var response = parse(payload.headers, payload.body, hook);
+
+    assert.equal(response.message, 'Jenkins [webhooks-handler](http://beta-internal:8080/job/webhooks-handler/6/) success');
+    assert.equal(response.icon, 'smile');
+    assert.equal(response.errorLevel, 'normal');
   });
 
   it('should generate a start message', function() {
-    var body = examples['started'].body;
+    var payload = examples['started'];
     var hook = {
       settings: {
         events: ['started']
       }
     };
-    assert.equal(parse({}, body, hook).message, 'Job webhooks-handler started');
+
+    var response = parse(payload.headers, payload.body, hook);
+
+    assert.equal(response.message, 'Jenkins [webhooks-handler](http://beta-internal:8080/job/webhooks-handler/6/) started');
+    assert.equal(response.icon, 'meh');
+    assert.equal(response.errorLevel, 'normal');
   });
 
   it('shouldnt generate a start message if im not listening to that event', function() {
-    var body = examples['started'].body;
+    var payload = examples['started'];
     var hook = {
       settings: {
         events: ['success']
       }
     };
-    assert.equal(parse({}, body, hook), undefined);
+
+    var response = parse(payload.headers, payload.body, hook);
+
+    assert.equal(response, undefined);
   });
 
   it('shouldnt generate a message for completed jobs', function() {
-    var body = examples['completed'].body;
+    var payload = examples['completed'];
     var hook = {
       settings: {
         events: ['started', 'success', 'failure']
       }
     };
-    assert.equal(parse({}, body, hook), undefined);
+
+    var response = parse(payload.headers, payload.body, hook);
+
+    assert.equal(response, undefined);
   });
 
 });
