@@ -15,8 +15,35 @@ describe('sanity tests:', function() {
         assert(service.friendlyName.length > 0);
       });
 
-      it('has a parse function', function() {
-        assert.equal(typeof service.parse, 'function');
+      describe('parse function', function() {
+        it('exists', function() {
+          assert.equal(typeof service.parse, 'function');
+        });
+
+        Object.keys(service.examples).forEach(function(exampleName) {
+          describe('parsing "'+exampleName+'" example', function() {
+            var example = service.examples[exampleName];
+            var configOptions = service.options.map(function(option) { return option.id;});
+
+            if(configOptions.length) {
+              configOptions.forEach(function(option) {
+                it('works with "'+option+'" option set', function() {
+                  var options = { settings: { events: [option] } };
+                  var result = service.parse(example.headers, example.body, options);
+
+                  assertValidParserResponse(result, service.icons);
+                });
+              });
+            } else {
+              it('works with no options set', function() {
+                var options = { settings: { events: [] } };
+                var result = service.parse(example.headers, example.body, options);
+
+                assertValidParserResponse(result, service.icons);
+              });
+            }
+          });
+        });
       });
 
       it('has options', function() {
@@ -51,3 +78,13 @@ describe('sanity tests:', function() {
     });
   });
 });
+
+function assertValidParserResponse(res, serviceIcons) {
+  if(res) {
+    var validErrorLevels = ['normal', 'error'];
+    var validIcons = Object.keys(serviceIcons);
+    assert(res.message, 'message was "'+res.message+'"');
+    assert(validIcons.indexOf(res.icon) >= 0, 'icon was "'+res.icon+'", which was not one of: '+validIcons);
+    assert(validErrorLevels.indexOf(res.errorLevel) >= 0, 'errorLevel was "'+res.errorLevel+'", which was not one of: '+validErrorLevels);
+  }
+}
