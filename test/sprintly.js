@@ -1,5 +1,5 @@
 var assert = require('assert');
-var sprintly = require('../lib/sprintly');
+var sprintly = require('..').sprintly;
 var parse = sprintly.parse;
 var examples = sprintly.examples;
 

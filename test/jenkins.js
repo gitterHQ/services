@@ -1,5 +1,5 @@
 var assert = require('assert');
-var jenkins = require('../lib/jenkins');
+var jenkins = require('..').jenkins;
 var parse = jenkins.parse;
 var examples = jenkins.examples;
 

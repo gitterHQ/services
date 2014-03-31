@@ -1,5 +1,5 @@
 var assert = require('assert');
-var travis = require('../lib/travis');
+var travis = require('..').travis;
 var parse = travis.parse;
 var examples = travis.examples;
 
