@@ -174,6 +174,17 @@ server.post('/jenkins/hookendpoint') = function(req, res) {
 
 ```
 
+Community
+---------
+Are things going wrong? Are things going right? Do you have an awesome idea that you need a hand with?
+
+Come and chat with everyone at [gitter.im/gitterHQ/services](https://gitter.im/gitterHQ/services).
+
+Authors
+-------
+
+Hammered out by [malditogeek](https://github.com/malditogeek), shuffled around by [trevorah](https://github.com/trevorah).
+
 License
 -------
 MIT
