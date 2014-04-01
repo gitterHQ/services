@@ -15,6 +15,10 @@ describe('sanity tests:', function() {
         assert(service.friendlyName.length > 0);
       });
 
+      it('has settings', function() {
+        assert.equal(typeof service.settings, 'object');
+      });
+
       describe('parse function', function() {
         it('exists', function() {
           assert.equal(typeof service.parse, 'function');
@@ -23,31 +27,26 @@ describe('sanity tests:', function() {
         Object.keys(service.examples).forEach(function(exampleName) {
           describe('parsing "'+exampleName+'" example', function() {
             var example = service.examples[exampleName];
-            var configOptions = service.options.map(function(option) { return option.id;});
+            var configOptions = service.settings.events.map(function(option) { return option.id;});
 
             if(configOptions.length) {
               configOptions.forEach(function(option) {
                 it('works with "'+option+'" option set', function() {
-                  var options = { settings: { events: [option] } };
-                  var result = service.parse(example.headers, example.body, options);
+                  var settings = { events: [option] };
+                  var result = service.parse(example.headers, example.body, settings);
 
                   assertValidParserResponse(result, service.icons);
                 });
               });
             } else {
               it('works with no options set', function() {
-                var options = { settings: { events: [] } };
-                var result = service.parse(example.headers, example.body, options);
+                var result = service.parse(example.headers, example.body, { events: [] });
 
                 assertValidParserResponse(result, service.icons);
               });
             }
           });
         });
-      });
-
-      it('has options', function() {
-        assert(service.options instanceof Array, serviceName+'.options is not an Array');
       });
 
       it('has instructions', function() {

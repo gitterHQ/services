@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "id": "moved",
+      "name": "Moved",
+      "description": "When an issue or pull request is moved",
+      "selected": true
+    },
+    {
+      "id": "reordered",
+      "name": "Reordered",
+      "description": "When an issue or pull request is reordered in a column",
+      "selected": true
+    },
+    {
+      "id": "issue_status_changed",
+      "name": "Status Change",
+      "description": "When an issue or pull request is marked as blocked/ready",
+      "selected": true
+    },
+    {
+      "id": "milestone_changed",
+      "name": "Milestone Change",
+      "description": "When an issue or pull request has its milestone changed",
+      "selected": true
+    },
+    {
+      "id": "issue_opened_or_closed",
+      "name": "Opened Or Closed",
+      "description": "When an issue or pull request is opened or closed via HuBoard",
+      "selected": false
+    },
+    {
+      "id": "assigned",
+      "name": "Assigned",
+      "description": "When an issue or pull request is assigned to someone",
+      "selected": false
+    }
+  ]
+}
