@@ -25,6 +25,7 @@ If everything passes, then you are ready!
         │   ├── logo.png
         │   └── logo@2x.png
         ├── instructions.md
+        ├── settings.json
         ├── examples
         │   └── some_example_webhook.json
         └── test
@@ -35,11 +36,11 @@ If everything passes, then you are ready!
   * `apiVersion`: (_number_) the major version of this api.
   * `friendlyName`: (_string_) how you would like your service named to the user (e.g github's friendly name is GitHub).
   * `parse`: (_function_) the function to parse any incoming webhooks.
-  * `options`: (_array_) EXPLAIN THIS
 * `icons`: This directory contains all the png icons that can be used by this service. They must follow the following rules:
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
+* `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events. Format is: `{ events: [ { id: 'someId', name: 'My Event', description: 'An explaination of the event', selected: true }, ... ] }`.
 * `examples`: This directory contains examples to be used in your tests (and our sanity testting). Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
@@ -65,7 +66,7 @@ Then your `index.js` needs to look like this:
 module.exports = {
   apiVersion: 0,
   friendlyName: 'Jenkins',
-  parse: function(headers, body, hookConfig) {
+  parse: function(headers, body, settings) {
     return {
       message: 'Jenkins [webhooks-handler](http://users-jenkins.server.com/job/webhooks-handler/6/) success',
       icon: 'smile',
@@ -78,6 +79,16 @@ module.exports = {
     { id: "failure", name: "Failure", description: "When a build fails. Sad face.", selected: true },
   ]
 };
+```
+Your `settings.json` needs to look like this:
+```json
+{
+  "options": [
+    { "id": "started", "name": "Started", "description": "When a build is started.", "selected": false },
+    { "id": "success", "name": "Success", "description": "When a build finishes successfully.", "selected": false },
+    { "id": "failure", "name": "Failure", "description": "When a build fails. Sad face.", "selected": true },
+  ]
+}
 ```
 Your `instructions.md` should look like this:
 ```markdown
@@ -122,7 +133,7 @@ gitter-services will give you the following:
     selected: false
   }, ...],
   instructions: '1. read these instructions in markdown...',
-  parse: function(hookHeaders, hookBody, config) {
+  parse: function(hookHeaders, hookBody, settings) {
     return {
       message: 'some markdown...',
       icon: 'someIcon',
@@ -147,7 +158,7 @@ server.get('/jenkins/instructions') = function(req, res) {
   res.render('some-instructions-template', {
     logo: jenkins.icons.logo.legacy,
     instructions: jenkins.instructions,
-    configOptions: jenkins.options
+    configOptions: jenkins.settings
   });
 });
 
