@@ -6,8 +6,8 @@ describe('sanity tests:', function() {
     describe(serviceName, function() {
       var service = services[serviceName];
 
-      it('has an apiVersion', function() {
-        assert.equal(typeof service.apiVersion, 'number');
+      it('has an apiVersion of zero', function() {
+        assert.strictEqual(service.apiVersion, 0);
       });
 
       it('has a friendlyName', function() {
