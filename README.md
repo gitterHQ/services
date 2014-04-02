@@ -35,11 +35,19 @@ If everything passes, then you are ready!
 * `index.js`: This module has to export the following:
   * `apiVersion`: (_number_) the major version of this api.
   * `friendlyName`: (_string_) how you would like your service named to the user (e.g github's friendly name is GitHub).
-  * `parse`: (_function_) the function to parse any incoming webhooks.
+  * `parse`: (_function_) the function to parse all incoming webhooks from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
+    * has the signature `function(headers, body, settings)` where:
+      * `headers`: (_object_) the headers of the webhook POST request e.g `{ "content-type": "application/json", ... }`.
+      * `body`: (_object_) the body of the webhook POST request.
+      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: ["someId", ...] }`.
+    * returns a message object with these properties:
+      * `message`: (_string_) the message do be displayed (in markdown) e.g `"Some *Amazing* event has occured"`.
+      * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g `"logo"`.
+      * `errorLevel`: (_string_) either `"normal"` or `"error"`. These messages get styled red, and so the `icon` that you pick for this message must be red too ([#e74c3c](http://www.colorhexa.com/e74c3c)).
 * `icons`: This directory contains all the png icons that can be used by this service. They must follow the following rules:
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
-  * icons must be either black and white, or #e74c3c and white (for error messages).
+  * icons must be either black and white, or [#e74c3c](http://www.colorhexa.com/e74c3c) and white (for error messages).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
 * `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events.
   Format is:
@@ -50,7 +58,7 @@ If everything passes, then you are ready!
         "id": "someId",
         "name": "My Event",
         "description": "An explanation of the event",
-        "selected": true
+        "selected": true // whether or not this event option is enabled by default
       },
       ...
     ]
