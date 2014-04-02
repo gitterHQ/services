@@ -20,16 +20,16 @@ If everything passes, then you are ready!
 .
 └── lib
     └── YOUR_SERVICE_NAME
-        ├── index.js
-        ├── icons
-        │   ├── logo.png
-        │   └── logo@2x.png
-        ├── instructions.md
+        ├── index.js
+        ├── icons
+        │   ├── logo.png
+        │   └── logo@2x.png
+        ├── instructions.md
         ├── settings.json
-        ├── examples
-        │   └── some_example_webhook.json
-        └── test
-            └── index.js
+        ├── examples
+        │   └── some_example_webhook.json
+        └── test
+            └── index.js
 ```
 
 * `index.js`: This module has to export the following:
