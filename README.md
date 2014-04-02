@@ -101,78 +101,9 @@ Your `instructions.md` should look like this:
 7. Paste in your webhook url into "URL"
 8. Click "Apply"
 ```
-And your `icons` directory needs to contain these:
+And finally, your `icons` directory needs to contain these:
 
 ![Jenkins icons](img/icons.png)
-
-How to use
-----------
-`npm install gitter-services`
-```javascript
-var services = require('gitter-services');
-console.log(services);
-
-// {
-//   jenkins: {...},
-//   huboard: {...},
-//   ...
-// }
-```
-gitter-services will give you the following:
-
-`console.log(services['some-service'])`
-
-```javascript
-{
-  apiVersion: 0,
-  friendlyName: 'Some Service',
-  options: [{
-    id: 'showBoringEvent',
-    name: "Show Message For Boring Event",
-    description: "When an issue or pull request is moved",
-    selected: false
-  }, ...],
-  instructions: '1. read these instructions in markdown...',
-  parse: function(hookHeaders, hookBody, settings) {
-    return {
-      message: 'some markdown...',
-      icon: 'someIcon',
-      errorLevel: 'normal'
-    };
-  },
-  icons: {
-    logo: {
-      legacy: '/path/to/icon/logo.png',
-      retina: '/path/to/icon/logo@2x.png',
-    },
-    someIcon: {...}
-  },
-}
-```
-In practice, you would use it like this:
-```javascript
-var server = require('some-server');
-var jenkins = require('gitter-services').jenkins;
-
-server.get('/jenkins/instructions') = function(req, res) {
-  res.render('some-instructions-template', {
-    logo: jenkins.icons.logo.legacy,
-    instructions: jenkins.instructions,
-    configOptions: jenkins.settings
-  });
-});
-
-server.post('/jenkins/hookendpoint') = function(req, res) {
-  var result = jenkins.parse(req.headers, req.body);
-  server.pushToUser({
-    icon: jenkins.icons[result.icon].legacy,
-    content: result.message,
-    style: result.errorLevel
-  });
-  res.send(200);
-});
-
-```
 
 Community
 ---------
