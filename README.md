@@ -41,7 +41,7 @@ If everything passes, then you are ready!
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
 * `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events. Format is: `{ events: [ { id: 'someId', name: 'My Event', description: 'An explaination of the event', selected: true }, ... ] }`.
-* `examples`: This directory contains examples to be used in your tests (and our sanity testting). Again, rules:
+* `examples`: This directory contains examples to be used in your tests (and our sanity testing). Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
@@ -183,7 +183,7 @@ Come and chat with everyone at [gitter.im/gitterHQ/services](https://gitter.im/g
 Authors
 -------
 
-Hammered out by [malditogeek](https://github.com/malditogeek), shuffled around by [trevorah](https://github.com/trevorah).
+Started by [malditogeek](https://github.com/malditogeek), shuffled around by [trevorah](https://github.com/trevorah).
 
 License
 -------
