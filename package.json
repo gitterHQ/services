@@ -7,7 +7,8 @@
     "mocha": "~1.18.2"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/ lib/*/test"
+    "test": "mocha --reporter spec test/ lib/*/test",
+    "clean-pngs": "find lib -name *.png -exec convert -strip {} {} \\;"
   },
   "repository": {
     "type": "git",

@@ -39,6 +39,7 @@ If everything passes, then you are ready!
 * `icons`: This directory contains all the png icons that can be used by this service. They must follow the following rules:
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
+  * icons must be either black and white, or #e74c3c and white (for error messages).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
 * `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events.
   Format is:
