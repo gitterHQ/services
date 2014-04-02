@@ -40,7 +40,21 @@ If everything passes, then you are ready!
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
-* `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events. Format is: `{ events: [ { id: 'someId', name: 'My Event', description: 'An explaination of the event', selected: true }, ... ] }`.
+* `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events.
+  Format is:
+  ```json
+  {
+    "events": [
+      {
+        "id": "someId",
+        "name": "My Event",
+        "description": "An explanation of the event",
+        "selected": true
+      },
+      ...
+    ]
+  }
+  ```
 * `examples`: This directory contains examples to be used in your tests (and our sanity testing). Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
