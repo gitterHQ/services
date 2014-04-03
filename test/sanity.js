@@ -10,9 +10,9 @@ describe('sanity tests:', function() {
         assert.strictEqual(service.apiVersion, 0);
       });
 
-      it('has a friendlyName', function() {
-        assert.equal(typeof service.friendlyName, 'string');
-        assert(service.friendlyName.length > 0);
+      it('has a name', function() {
+        assert.equal(typeof service.name, 'string');
+        assert(service.name.length > 0);
       });
 
       it('has settings', function() {
