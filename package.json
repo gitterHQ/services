@@ -4,10 +4,11 @@
   "description": "supported services for gitter.im",
   "main": "index.js",
   "devDependencies": {
-    "mocha": "~1.18.2"
+    "mocha": "^1.18.2",
+    "istanbul": "^0.2.7"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/ lib/*/test",
+    "test": "make test-cov",
     "clean-pngs": "find lib -name *.png -exec convert -strip {} {} \\;"
   },
   "repository": {
