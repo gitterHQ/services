@@ -34,7 +34,7 @@ If everything passes, then you are ready!
 
 * `index.js`: This module has to export the following:
   * `apiVersion`: (_number_) the major version of this api.
-  * `friendlyName`: (_string_) how you would like your service named to the user (e.g github's friendly name is GitHub).
+  * `name`: (_string_) how you would like your service named to the user (e.g github's name is `GitHub`).
   * `parse`: (_function_) the function called every time we receive an incoming webhook from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
     * has the signature `function(headers, body, settings)` where:
       * `headers`: (_object_) the headers of the webhook POST request e.g `{ "content-type": "application/json", ... }`.
@@ -112,7 +112,7 @@ Then your `index.js` needs to look like this:
 ```javascript
 module.exports = {
   apiVersion: 0,
-  friendlyName: 'Jenkins',
+  name: 'Jenkins',
   parse: function(headers, body, settings) {
     return {
       message: 'Jenkins [webhooks-handler](http://users-jenkins.server.com/job/webhooks-handler/6/) success',
