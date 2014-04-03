@@ -35,11 +35,11 @@ If everything passes, then you are ready!
 * `index.js`: This module has to export the following:
   * `apiVersion`: (_number_) the major version of this api.
   * `friendlyName`: (_string_) how you would like your service named to the user (e.g github's friendly name is GitHub).
-  * `parse`: (_function_) the function to parse all incoming webhooks from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
+  * `parse`: (_function_) the function called every time we receive an incoming webhook from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
     * has the signature `function(headers, body, settings)` where:
       * `headers`: (_object_) the headers of the webhook POST request e.g `{ "content-type": "application/json", ... }`.
       * `body`: (_object_) the body of the webhook POST request.
-      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: ["someId", ...] }`.
+      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: {"someId": true, ... } }`. `events` will be a map of the the event `id`'s that a user has picked.
     * returns a message object with these properties:
       * `message`: (_string_) the message do be displayed (in markdown) e.g `"Some *Amazing* event has occured"`.
       * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g `"logo"`.
@@ -60,6 +60,39 @@ If everything passes, then you are ready!
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
 
+### Settings
+As shown above, settings available to the user are declared in a service's `settings.json`. These choices are then sent with every incoming webhook to that service's `parse` function. **It is up to the parse() function to decide if that hook is relevant to the users choices**.
+
+For example, if you have the following settings.json:
+```json
+{
+  "events": [
+    {
+      "id": "kitten_yawn",
+      "name": "Kitten Yawn",
+      "description": "Whenever a kitten yawns.",
+      "selected": true
+    },
+    {
+      "id": "kitten_purr",
+      "name": "Kitten Purr",
+      "description": "Whenever a kitten purrs.",
+      "selected": true
+    }
+  ]
+}
+```
+
+Then if the user only wants to be notified of `kitten_purr` events and **not** `kitten_yawn` events, then the `parse(headers, body, settings)` function will be called with a `settings` object like this:
+```json
+{
+  "events": {
+    "kitten_yawn": false,
+    "kitten_purr": true
+  }
+}
+```
+The `parse` function then has to compare the `headers` and `body` with the `settings` to see what should be returned (if anything).
 
 Example
 -------
@@ -86,21 +119,31 @@ module.exports = {
       icon: 'smile',
       errorLevel: 'normal'
     };  
-  },
-  options: [
-    { id: "started", name: "Started", description: "When a build is started.", selected: false },
-    { id: "success", name: "Success", description: "When a build finishes successfully.", selected: false },
-    { id: "failure", name: "Failure", description: "When a build fails. Sad face.", selected: true },
-  ]
+  }
 };
 ```
 Your `settings.json` needs to look like this:
 ```json
 {
-  "options": [
-    { "id": "started", "name": "Started", "description": "When a build is started.", "selected": false },
-    { "id": "success", "name": "Success", "description": "When a build finishes successfully.", "selected": false },
-    { "id": "failure", "name": "Failure", "description": "When a build fails. Sad face.", "selected": true },
+  "events": [
+    {
+      "id": "started",
+      "name": "Started",
+      "description": "When a build is started.",
+      "selected": false },
+    {
+      "id": "success",
+      "name": "Success",
+      "description":
+      "When a build finishes successfully.",
+      "selected": false
+      },
+    {
+      "id": "failure",
+      "name": "Failure",
+      "description": "When a build fails. Sad face.",
+      "selected": true
+    }
   ]
 }
 ```
