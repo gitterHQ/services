@@ -4,7 +4,7 @@ The things that power your Gitter activity feed.
 
 What services are available?
 ----------------------------
-If its in the `lib` folder, we support it.
+If it is in the `lib` folder, we support it.
 
 How to add your service
 -----------------------
