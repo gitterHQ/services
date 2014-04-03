@@ -32,7 +32,8 @@ describe('sanity tests:', function() {
             if(configOptions.length) {
               configOptions.forEach(function(option) {
                 it('works with "'+option+'" option set', function() {
-                  var settings = { events: [option] };
+                  var settings = { events: {} };
+                  settings.events[option] = true;
                   var result = service.parse(example.headers, example.body, settings);
 
                   assertValidParserResponse(result, service.icons);
