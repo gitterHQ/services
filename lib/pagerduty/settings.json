@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "id": "trigger",
+      "name": "Trigger",
+      "description": "Sent when an incident is newly created/triggered.",
+      "selected": true
+    },
+    {
+      "id": "acknowledge",
+      "name": "Acknowledge",
+      "description": "Sent when an incident has had its status changed from triggered to acknowledged.",
+      "selected": false
+    },
+    {
+      "id": "unacknowledge",
+      "name": "Unacknowledge",
+      "description": "Sent when an incident is unacknowledged due to timeout.",
+      "selected": false
+    },
+    {
+      "id": "resolve",
+      "name": "Resolve",
+      "description": "Sent when an incident has been resolved.",
+      "selected": true
+    },
+    {
+      "id": "assign",
+      "name": "Assign",
+      "description": "Sent when an incident has been manually reassigned to another user in a different escalation chain.",
+      "selected": false
+    },
+    {
+      "id": "escalate",
+      "name": "Escalate",
+      "description": "Sent when an incident has been escalated to another user in the same escalation chain.",
+      "selected": false
+    },
+    {
+      "id": "delegate",
+      "name": "Delegate",
+      "description": "Sent when an incident has been reassigned to another escalation chain.",
+      "selected": false
+    }
+  ]
+}
