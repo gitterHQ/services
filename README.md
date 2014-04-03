@@ -43,27 +43,18 @@ If everything passes, then you are ready!
     * returns a message object with these properties:
       * `message`: (_string_) the message do be displayed (in markdown) e.g `"Some *Amazing* event has occured"`.
       * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g `"logo"`.
-      * `errorLevel`: (_string_) either `"normal"` or `"error"`. These messages get styled red, and so the `icon` that you pick for this message must be red too ([#e74c3c](http://www.colorhexa.com/e74c3c)).
+      * `errorLevel`: (_string_) either `"normal"` or `"error"`. Error messages get styled red, and so the `icon` that you pick for this message must be red too ([#e74c3c](http://www.colorhexa.com/e74c3c)).
 * `icons`: This directory contains all the png icons that can be used by this service. They must follow the following rules:
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
   * icons must be either black and white, or [#e74c3c](http://www.colorhexa.com/e74c3c) and white (for error messages).
 * `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
 * `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events.
-  Format is:
-  ```json
-  {
-    "events": [
-      {
-        "id": "someId",
-        "name": "My Event",
-        "description": "An explanation of the event",
-        "selected": true // whether or not this event option is enabled by default
-      },
-      ...
-    ]
-  }
-  ```
+  Format is `{ "events": [event1, event2, ... ] }` where each event is an object that has these properties:
+  * `id`: (_string_) a unique id that will be passed into the `parse` function if selected e.g `"high_five"`.
+  * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
+  * `description`: (_string_) an explanation of the event e.g `"Single clap made by two people"`.
+  * `selected`: (_boolean_) whether or not this event option is enabled by default.
 * `examples`: This directory contains examples to be used in your tests (and our sanity testing). Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
