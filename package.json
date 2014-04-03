@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/gitterHQ/services",
   "dependencies": {
-    "require-all": "0.0.8"
+    "require-all": "0.0.8",
+    "qs": "^0.6.6",
+    "extend": "^1.2.1"
   }
 }
