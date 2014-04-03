@@ -111,7 +111,7 @@ Which then outputs something like this:
 Then your `index.js` needs to look like this:
 ```javascript
 module.exports = {
-  apiVersion: 0,
+  apiVersion: 1,
   name: 'Jenkins',
   parse: function(headers, body, settings) {
     return {
