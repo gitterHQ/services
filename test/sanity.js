@@ -79,11 +79,21 @@ describe('sanity tests:', function() {
 });
 
 function assertValidParserResponse(res, serviceIcons) {
+  var validErrorLevels = ['normal', 'error'];
+  var validIcons = Object.keys(serviceIcons);
+
+  function validateSingle(item) {
+    assert(item.message, 'message was "'+item.message+'"');
+    assert(validIcons.indexOf(item.icon) >= 0, 'icon was "'+item.icon+'", which was not one of: '+validIcons);
+    assert(validErrorLevels.indexOf(item.errorLevel) >= 0, 'errorLevel was "'+item.errorLevel+'", which was not one of: '+validErrorLevels);
+  }
+
   if(res) {
-    var validErrorLevels = ['normal', 'error'];
-    var validIcons = Object.keys(serviceIcons);
-    assert(res.message, 'message was "'+res.message+'"');
-    assert(validIcons.indexOf(res.icon) >= 0, 'icon was "'+res.icon+'", which was not one of: '+validIcons);
-    assert(validErrorLevels.indexOf(res.errorLevel) >= 0, 'errorLevel was "'+res.errorLevel+'", which was not one of: '+validErrorLevels);
+    if(Array.isArray(res)) {
+      res.forEach(validateSingle);
+    } else {
+      validateSingle(res);
+    }
+
   }
 }
