@@ -1,0 +1,10 @@
+{
+  "events": [
+    {
+      "id": "completed",
+      "name": "Completed",
+      "description": "When a deployment completes",
+      "selected": true
+    }
+  ]
+}
