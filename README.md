@@ -1,6 +1,8 @@
 Gitter.im Services [![Build Status](https://travis-ci.org/gitterHQ/services.svg?branch=1.0.0)](https://travis-ci.org/gitterHQ/services) [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/gitterHQ/services)
 ==================
-The things that power your Gitter activity feed.
+The things that power your [Gitter](https://gitter.im) activity feed.
+
+Gitter.im uses this library to instruct a user on how to set up [webhooks](http://en.wikipedia.org/wiki/Webhook) for a particular external service (Jenkins, HuBoard etc). Then, when that service POSTs to gitter.im, this library is again used to parse the incoming data and get a human readable message. Gitter.im then displays the message in the user's activity feed.
 
 What services are available?
 ----------------------------
