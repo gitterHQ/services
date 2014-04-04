@@ -110,7 +110,7 @@ Which then outputs something like this:
 
 ![Jenkins activity item](img/activity-item.png)
 
-Then your `index.js` needs to look like this:
+Then your `index.js` needs to look like this (we've cut it down a bit, have a look at the [real one](https://github.com/gitterHQ/services/blob/master/lib/jenkins/index.js) with all its comments):
 ```javascript
 module.exports = {
   apiVersion: 1,
