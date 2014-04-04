@@ -57,7 +57,7 @@ If everything passes, then you are ready!
   * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
   * `description`: (_string_) an explanation of the event e.g `"Single clap made by two people"`.
   * `selected`: (_boolean_) whether or not this event option is enabled by default.
-* `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. We suggest using [requestb.in](http://requestb.in). Again, rules:
+* `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. You can use the playground for this. Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
@@ -95,6 +95,14 @@ Then if the user only wants to be notified of `kitten_purr` events and **not** `
 }
 ```
 The `parse` function then has to compare the `headers` and `body` with the `settings` to see what should be returned (if anything).
+
+Playground
+----------
+The playground exists as tool to try out your service with some real hooks (and your examples) to see how it behaves.
+
+![Jenkins playground](img/playground.png)
+
+Start it with `node playground/server.js` and go to `http://localhost:3333` in your browser. It will also start a proxy that is globally available at `https://[id].localtunnel.me` that anyone can reach and post hooks to.
 
 Example
 -------

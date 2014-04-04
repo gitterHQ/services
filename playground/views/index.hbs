@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+      </ol>
+      <h1>Available Services:</h1>
+      {{#each services}}
+      <a href="/{{@key}}" class="btn btn-default btn-lg btn-block" role="button"><img class="" src="/{{@key}}/icons/logo/retina"> {{name}}</a>
+      {{/each}}
+    </div>
+  </body>
+</html>
