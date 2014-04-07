@@ -57,7 +57,7 @@ If everything passes, then you are ready!
   * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
   * `description`: (_string_) an explanation of the event e.g `"Single clap made by two people"`.
   * `selected`: (_boolean_) whether or not this event option is enabled by default.
-* `examples`: This directory contains examples to be used in your tests (and our sanity testing). Again, rules:
+* `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. We suggest using [requestb.in](http://requestb.in). Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
