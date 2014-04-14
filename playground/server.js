@@ -96,7 +96,12 @@ app.post('/:service/hook', function(req, res) {
   if(!service) return res.send(404);
 
   var settings = { events: userSettings[req.params.service] };
-  var result = service.parse(req.headers, req.body, settings);
+  var result;
+  try {
+    result = service.parse(req.headers, req.body, settings);
+  } catch(e) {
+    console.log(e);
+  }
   var resultArray = [].concat(result || []);
 
   lastParsed[serviceName] = {
