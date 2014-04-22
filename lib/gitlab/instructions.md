@@ -1,4 +1,4 @@
-You need to configre your GitLab project to send [Webhook notifications](https://github.com/gitlabhq/gitlabhq/blob/master/doc/web_hooks/web_hooks.md)
+You need to configure your GitLab project to send [Webhook notifications](https://github.com/gitlabhq/gitlabhq/blob/master/doc/web_hooks/web_hooks.md)
 
 1. Go to your GitLab project, and click settings
 2. Click on Web Hooks
