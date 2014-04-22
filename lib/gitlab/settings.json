@@ -1,22 +1,3 @@
 {
-  "events": [
-    {
-      "id": "push",
-      "name": "Push",
-      "description": "Triggered when you push to the repository except pushing tags.",
-      "selected": false
-    },
-    {
-      "id": "issue",
-      "name": "Issue",
-      "description": "Triggered when a new issue is created or an existing issue was updated/closed/reopened.",
-      "selected": true
-    },
-    {
-      "id": "mergerequest",
-      "name": "Merge request",
-      "description": "Triggered when a new merge request is created or an existing merge request was updated/merges/closed.",
-      "selected": true
-    }
-  ]
+  "events": []
 }
