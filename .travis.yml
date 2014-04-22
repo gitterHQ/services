@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.10"
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks-beta.gitter.im/e/2752421039db31401ac5
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: always     # default: false

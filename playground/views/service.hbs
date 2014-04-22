@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style type="text/css">pre { max-height: 200px; overflow: scroll; } .btn-event{ margin-bottom: 5px; }</style>
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">{{id}}</li>
+      </ol>
+      <h1>{{name}} Playground</h1>
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Integration Settings</div>
+            <div class="panel-body">
+              {{#if events.length }}
+              <h5>Events</h5>
+              <p>Choose which {{name}} events you want to subscribe to:</p>
+              {{#each events}}
+              <button type="button" class="btn btn-default btn-event {{#if userSelected}}active{{/if}}" data-toggle="tooltip" title="{{description}}" data-event-id="{{id}}">{{name}}</button>
+              {{/each}}
+              {{/if}}
+              <h5>Instructions</h5>
+              {{{instructions}}}
+              <p>Your url is:</p>
+              <pre>{{hookUrl}}</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Examples</div>
+            <div class="panel-body">
+              <ul class="nav nav-pills">
+                {{#each examples}}
+                <li class="{{#if @first}}active{{/if}}">
+                  <a href="#examples-{{@key}}" data-toggle="tab">{{@key}}</a>
+                </li>
+                {{/each}}
+              </ul>
+              <div class="tab-content">
+                {{#each examples}}
+                <div class="tab-pane {{#if @first}}active{{/if}}" id="examples-{{@key}}">
+                  <h5>headers:</h5>
+                  <pre class="example-headers">{{headers}}</pre>
+                  <h5>body:</h5>
+                  <pre class="example-body">{{body}}</pre>
+                  <button class="btn sender pull-right">POST to {{../hookUrl}}</button>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">Last Parsed</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>headers:</h5>
+              <pre id="last-headers"></pre>
+            </div>
+            <div class="col-sm-4">
+              <h5>body:</h5>
+              <pre id="last-body"></pre>
+              </div>
+            <div class="col-sm-4">
+              <h5>settings:</h5>
+              <pre id="last-settings"></pre>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <h5>output (raw):</h5>
+              <pre id="last-output-raw"></pre>
+            </div>
+            <div class="col-sm-6">
+              <h5>output (rendered):</h5>
+              <div id="last-output-rendered"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+      var fetchLatestHook = function() {
+        $.get(window.location.pathname+'/lastParsed', function(data) {
+          $('#last-headers').text(data.headers);
+          $('#last-body').text(data.body);
+          $('#last-settings').text(data.settings);
+          $('#last-output-raw').text(data.raw || '[nothing returned]');
+          $('#last-output-rendered').html(data.html)
+        });
+      };
+
+      $('.btn-event').tooltip({container: 'body'}).on('click', function(e) {
+        var $el = $(e.target);
+        $el.toggleClass('active');
+        $.ajax({
+          url: window.location.pathname+'/settings/events/'+$el.data('eventId'),
+          type: 'POST'
+        });
+      });
+
+      $('.sender').on('click', function(e) {
+        $example = $(e.target).parent();
+        $.ajax({
+          url: '{{hookUrl}}',
+          type: 'POST',
+          headers: JSON.parse($example.find('.example-headers').text()),
+          data: JSON.parse($example.find('.example-body').text()),
+          success: fetchLatestHook
+        });
+      });
+
+      setInterval(fetchLatestHook, 5000);
+    </script>
+  </body>
+</html>

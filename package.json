@@ -1,13 +1,20 @@
 {
   "name": "gitter-services",
-  "version": "0.0.1",
+  "version": "1.1.1",
   "description": "supported services for gitter.im",
+  "private": true,
   "main": "index.js",
   "devDependencies": {
-    "mocha": "~1.18.2"
+    "mocha": "^1.18.2",
+    "istanbul": "^0.2.7",
+    "express": "^3.5.1",
+    "express-hbs": "^0.7.9",
+    "localtunnel": "^1.1.0",
+    "marked": "^0.3.2",
+    "handlebars": "^2.0.0-alpha.2"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/ lib/*/test",
+    "test": "make test-cov",
     "clean-pngs": "find lib -name *.png -exec convert -strip {} {} \\;"
   },
   "repository": {
@@ -29,6 +36,8 @@
   },
   "homepage": "https://github.com/gitterHQ/services",
   "dependencies": {
-    "require-all": "0.0.8"
+    "require-all": "0.0.8",
+    "qs": "^0.6.6",
+    "extend": "^1.2.1"
   }
 }

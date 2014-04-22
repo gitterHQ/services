@@ -1,10 +1,12 @@
-Gitter.im Services [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/gitterHQ/services)
+Gitter.im Services [![Build Status](https://travis-ci.org/gitterHQ/services.svg?branch=1.0.0)](https://travis-ci.org/gitterHQ/services) [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/gitterHQ/services)
 ==================
-The things that power your Gitter activity feed.
+The things that power your [Gitter](https://gitter.im) activity feed.
+
+Gitter.im uses this library to instruct a user on how to set up [webhooks](http://en.wikipedia.org/wiki/Webhook) for a particular external service (Jenkins, HuBoard etc). Then, when that service POSTs to gitter.im, this library is again used to parse the incoming data and get a human readable message. Gitter.im then displays the message in the user's activity feed.
 
 What services are available?
 ----------------------------
-If its in the `lib` folder, we support it.
+If it is in the `lib` folder, we support it.
 
 How to add your service
 -----------------------
@@ -34,12 +36,12 @@ If everything passes, then you are ready!
 
 * `index.js`: This module has to export the following:
   * `apiVersion`: (_number_) the major version of this api.
-  * `friendlyName`: (_string_) how you would like your service named to the user (e.g github's friendly name is GitHub).
-  * `parse`: (_function_) the function to parse all incoming webhooks from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
+  * `name`: (_string_) how you would like your service named to the user (e.g github's name is `GitHub`).
+  * `parse`: (_function_) the function called every time we receive an incoming webhook from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
     * has the signature `function(headers, body, settings)` where:
       * `headers`: (_object_) the headers of the webhook POST request e.g `{ "content-type": "application/json", ... }`.
       * `body`: (_object_) the body of the webhook POST request.
-      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: ["someId", ...] }`.
+      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: {"someId": true, ... } }`. `events` will be a map of the the event `id`'s that a user has picked.
     * returns a message object with these properties:
       * `message`: (_string_) the message do be displayed (in markdown) e.g `"Some *Amazing* event has occured"`.
       * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g `"logo"`.
@@ -55,11 +57,52 @@ If everything passes, then you are ready!
   * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
   * `description`: (_string_) an explanation of the event e.g `"Single clap made by two people"`.
   * `selected`: (_boolean_) whether or not this event option is enabled by default.
-* `examples`: This directory contains examples to be used in your tests (and our sanity testing). Again, rules:
+* `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. You can use the playground for this. Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
 
+### Settings
+As shown above, settings available to the user are declared in a service's `settings.json`. These choices are then sent with every incoming webhook to that service's `parse` function. **It is up to the parse() function to decide if that hook is relevant to the users choices**.
+
+For example, if you have the following settings.json:
+```json
+{
+  "events": [
+    {
+      "id": "kitten_yawn",
+      "name": "Kitten Yawn",
+      "description": "Whenever a kitten yawns.",
+      "selected": true
+    },
+    {
+      "id": "kitten_purr",
+      "name": "Kitten Purr",
+      "description": "Whenever a kitten purrs.",
+      "selected": true
+    }
+  ]
+}
+```
+
+Then if the user only wants to be notified of `kitten_purr` events and **not** `kitten_yawn` events, then the `parse(headers, body, settings)` function will be called with a `settings` object like this:
+```json
+{
+  "events": {
+    "kitten_yawn": false,
+    "kitten_purr": true
+  }
+}
+```
+The `parse` function then has to compare the `headers` and `body` with the `settings` to see what should be returned (if anything).
+
+Playground
+----------
+The playground exists as tool to try out your service with some real hooks (and your examples) to see how it behaves.
+
+![Jenkins playground](img/playground.png)
+
+Start it with `node playground/server.js` and go to `http://localhost:3333` in your browser. It will also start a proxy that is globally available at `https://[id].localtunnel.me` that anyone can reach and post hooks to.
 
 Example
 -------
@@ -75,32 +118,42 @@ Which then outputs something like this:
 
 ![Jenkins activity item](img/activity-item.png)
 
-Then your `index.js` needs to look like this:
+Then your `index.js` needs to look like this (we've cut it down a bit, have a look at the [real one](https://github.com/gitterHQ/services/blob/master/lib/jenkins/index.js) with all its comments):
 ```javascript
 module.exports = {
-  apiVersion: 0,
-  friendlyName: 'Jenkins',
+  apiVersion: 1,
+  name: 'Jenkins',
   parse: function(headers, body, settings) {
     return {
       message: 'Jenkins [webhooks-handler](http://users-jenkins.server.com/job/webhooks-handler/6/) success',
       icon: 'smile',
       errorLevel: 'normal'
     };  
-  },
-  options: [
-    { id: "started", name: "Started", description: "When a build is started.", selected: false },
-    { id: "success", name: "Success", description: "When a build finishes successfully.", selected: false },
-    { id: "failure", name: "Failure", description: "When a build fails. Sad face.", selected: true },
-  ]
+  }
 };
 ```
 Your `settings.json` needs to look like this:
 ```json
 {
-  "options": [
-    { "id": "started", "name": "Started", "description": "When a build is started.", "selected": false },
-    { "id": "success", "name": "Success", "description": "When a build finishes successfully.", "selected": false },
-    { "id": "failure", "name": "Failure", "description": "When a build fails. Sad face.", "selected": true },
+  "events": [
+    {
+      "id": "started",
+      "name": "Started",
+      "description": "When a build is started.",
+      "selected": false },
+    {
+      "id": "success",
+      "name": "Success",
+      "description":
+      "When a build finishes successfully.",
+      "selected": false
+      },
+    {
+      "id": "failure",
+      "name": "Failure",
+      "description": "When a build fails. Sad face.",
+      "selected": true
+    }
   ]
 }
 ```
