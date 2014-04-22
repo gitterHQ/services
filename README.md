@@ -104,6 +104,8 @@ The playground exists as tool to try out your service with some real hooks (and 
 
 Start it with `node playground/server.js` and go to `http://localhost:3333` in your browser. It will also start a proxy that is globally available at `https://[id].localtunnel.me` that anyone can reach and post hooks to.
 
+If you find yourself restarting the server often, install [nodemon](http://nodemon.io) and run the server with `nodemon playground/server.js` to have the server restart on file change. **Warning: localtunnel will give you a new tunnel address on every restart.**
+
 Example
 -------
 Lets say that you want to your service on Gitter to have a button like this:
