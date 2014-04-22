@@ -1,0 +1,17 @@
+{
+  "headers": {},
+  "body": {
+    "ref": "refs/tags/tag2",
+    "before": "0000000000000000000000000000000000000000",
+    "after": "9cb51eb89aa8a14788cdab2581ebbfc22af4ad90",
+    "user_id": 27918,
+    "user_name": "Andy Trevorah",
+    "project_id": 44829,
+    "repository": {
+      "name": "test-repo",
+      "url": "git@gitlab.com:trevorah/test-repo.git",
+      "description": "",
+      "homepage": "https://gitlab.com/trevorah/test-repo"
+    }
+  }
+}
