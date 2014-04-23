@@ -2,6 +2,6 @@
   "headers": {},
   "body": {
     "message": "Hello full world",
-    "errorLevel": "normal"
+    "level": "info"
   }
 }
