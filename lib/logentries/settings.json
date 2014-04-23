@@ -1,0 +1,10 @@
+{
+  "events": [
+    {
+      "id": "alert",
+      "name": "Alert",
+      "description": "When an alert is triggered",
+      "selected": true
+    }
+  ]
+}
