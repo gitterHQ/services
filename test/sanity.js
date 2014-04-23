@@ -15,8 +15,25 @@ describe('sanity tests:', function() {
         assert(service.name.length > 0);
       });
 
-      it('has settings', function() {
-        assert.equal(typeof service.settings, 'object');
+      describe('settings', function() {
+        var settings = service.settings;
+        it('exists', function() {
+          assert.equal(typeof settings, 'object');
+        });
+
+        describe('events', function() {
+          var events = settings.events;
+          it('has is an array', function() {
+            assert(events instanceof Array);
+          });
+
+          it('is a choice', function() {
+            assert(events.length !== 1,
+              'If someone chooses not to listen to the only event, then they will get no messages. Use an empty Array instead.');
+          });
+        });
+
+
       });
 
       describe('parse function', function() {
