@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "id": "fatal",
+      "name": "Fatal",
+      "description": "Fatal level events",
+      "selected": true
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "description": "Error level events",
+      "selected": true
+    },
+    {
+      "id": "warning",
+      "name": "Warning",
+      "description": "Warning level events",
+      "selected": false
+    },
+    {
+      "id": "info",
+      "name": "Info",
+      "description": "Info level events",
+      "selected": false
+    },    
+    {
+      "id": "debug",
+      "name": "Debug",
+      "description": "Debug level events",
+      "selected": false
+    }
+  ]
+}
