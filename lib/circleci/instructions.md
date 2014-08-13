@@ -4,7 +4,7 @@ Add the following to your `circle.yml` file:
 ```yaml
 notify:
   webhooks:
-  	# A list of hook hashes, containing the url field
+    # A list of hook hashes, containing the url field
     # gitter hook
     - url: YOUR_WEBHOOK_URL
 ```
