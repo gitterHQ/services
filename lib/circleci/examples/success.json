@@ -1,0 +1,33 @@
+{ 
+  "headers": {},
+  "body": {
+    "payload": {
+      "vcs_url" : "https://github.com/circleci/mongofinil",
+      "build_url" : "https://circleci.com/gh/circleci/mongofinil/26",
+      "build_num" : 26,
+      "branch" : "master",
+      "vcs_revision" : "59c9c5ea3e289f2f3b0c94e128267cc0ce2d65c6",
+      "committer_name" : "Allen Rohner",
+      "committer_email" : "arohner@gmail.com",
+      "subject" : "Merge pull request #6 from dlowe/master",
+      "body": "le bump",
+      "why" : "retry",
+      "dont_build" : null,
+      "queued_at" : "2013-05-24T19:37:59.095Z",
+      "start_time" : null,
+      "stop_time" : null,
+      "build_time_millis" : 23242,
+      "username" : "circleci",
+      "reponame" : "mongofinil",
+      "lifecycle" : "finished",
+      "outcome" : "success",
+      "status" : "success",
+      "canceled" : true,
+      "retry_of" : 25,
+      "previous" : {
+        "status" : "success",
+        "build_num" : 25
+      }
+    }
+  }
+}
