@@ -1,0 +1,27 @@
+{
+  "headers": {},
+  "body": {
+    "name": "myjob",
+    "url": "job/myjob/",
+    "build": {
+      "full_url": "http://builds.local:8080/job/myjob/93/",
+      "number": 93,
+      "phase": "FINALIZED",
+      "status": "SUCCESS",
+      "url": "job/myjob/93/",
+      "scm": {
+        "url": "git@github.com:org/repo.git",
+        "branch": "origin/master",
+        "commit": "88c34b37a0861c3d19766fb5992c8de7111a62e5"
+      },
+      "artifacts": {
+        "$BUILD_NUMBER.tar": {
+          "s3": "https://s3-us-east-1.amazonaws.com/mybuilds/$BUILD_NUMBER.tar"
+        },
+        "93.tar": {
+          "archive": "http://builds.local:8080/job/myjob/93/artifact/93.tar"
+        }
+      }
+    }
+  }
+}
