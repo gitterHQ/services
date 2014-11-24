@@ -50,8 +50,8 @@ If everything passes, then you are ready!
   * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
   * there must be a logo icon (`logo.png` and `logo@2x.png`).
   * icons must be either black and white, or [#e74c3c](http://www.colorhexa.com/e74c3c) and white (for error messages).
-* `instructions.md`: The instructions the will be displayed when someone needs to set up your service to emit webhooks.
-* `settings.json`: This represents the settings available available to the user when creating an integration. At the moment, it's only list of events.
+* `instructions.md`: The instructions that will be displayed when someone needs to set up your service to emit webhooks.
+* `settings.json`: This represents the settings available to the user when creating an integration. At the moment, it's only list of events.
   Format is `{ "events": [event1, event2, ... ] }` where each event is an object that has these properties:
   * `id`: (_string_) a unique id that will be passed into the `parse` function if selected e.g `"high_five"`.
   * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
@@ -60,7 +60,7 @@ If everything passes, then you are ready!
 * `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. You can use the playground for this. Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
-* `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, arn't you?
+* `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, aren't you?
 
 ### Settings
 As shown above, settings available to the user are declared in a service's `settings.json`. These choices are then sent with every incoming webhook to that service's `parse` function. **It is up to the parse() function to decide if that hook is relevant to the users choices**.
@@ -108,19 +108,19 @@ If you find yourself restarting the server often, install [nodemon](http://nodem
 
 Example
 -------
-Lets say that you want to your service on Gitter to have a button like this:
+Let's say you want your service on Gitter to have a button like:
 
 ![Jenkins button](img/button.png)
 
-Which opens up a configuration modal like this:
+Which opens a configuration modal like:
 
 ![Jenkins settings](img/settings.png)
 
-Which then outputs something like this:
+Which then outputs something like:
 
 ![Jenkins activity item](img/activity-item.png)
 
-Then your `index.js` needs to look like this (we've cut it down a bit, have a look at the [real one](https://github.com/gitterHQ/services/blob/master/lib/jenkins/index.js) with all its comments):
+Then your `index.js` needs to look like (we've cut it down a bit, have a look at the [real one](https://github.com/gitterHQ/services/blob/master/lib/jenkins/index.js) with all its comments):
 ```javascript
 module.exports = {
   apiVersion: 1,
