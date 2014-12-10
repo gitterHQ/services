@@ -5,16 +5,17 @@
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "mocha": "^1.18.2",
-    "istanbul": "^0.2.7",
     "express": "^3.5.1",
     "express-hbs": "^0.7.9",
+    "handlebars": "^2.0.0-alpha.2",
+    "istanbul": "^0.3.5",
     "localtunnel": "^1.1.0",
     "marked": "^0.3.2",
-    "handlebars": "^2.0.0-alpha.2"
+    "mocha": "^1.18.2"
   },
   "scripts": {
-    "test": "make test-cov",
+    "test-nocoverage": "mocha -R spec test/ lib/*/test",
+    "test": "istanbul cover _mocha -- -R spec  test/ lib/*/test && istanbul check-coverage --statements 90 --functions 77 --functions 100 --lines 96",
     "clean-pngs": "find lib -name *.png -exec convert -strip {} {} \\;"
   },
   "repository": {
