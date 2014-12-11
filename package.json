@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test-nocoverage": "mocha -R spec test/ lib/*/test",
-    "test": "istanbul cover _mocha -- -R spec  test/ lib/*/test && istanbul check-coverage --statements 90 --functions 77 --functions 100 --lines 96",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec  test/ lib/*/test && istanbul check-coverage --statements 90 --functions 77 --functions 100 --lines 96",
     "clean-pngs": "find lib -name *.png -exec convert -strip {} {} \\;"
   },
   "repository": {
