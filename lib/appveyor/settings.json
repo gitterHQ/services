@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "id": "build_success",
+      "name": "Success",
+      "description": "When a build finishes successfully.",
+      "selected": false
+    },
+    {
+      "id": "build_failed",
+      "name": "Failure",
+      "description": "When a build fails. Sad face.",
+      "selected": true
+    }
+  ]
+}
