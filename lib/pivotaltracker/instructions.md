@@ -1,0 +1,1 @@
+You need to configure an `Activity webhook` in your Pivotal Tracker project. To do this go to `Settings` > `Integrations` > `Activity Web Hook`, and add and extra hook with your `YOUR_WEBHOOK_URL`. Make sure to set this web hook to `v5`.

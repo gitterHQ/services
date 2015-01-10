@@ -1,0 +1,56 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_create_activity",
+    "guid": "1246106_8",
+    "project_version": 8,
+    "message": "Wim Mostmans added this feature",
+    "highlight": "added",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "create",
+        "id": 85835292,
+        "new_values": {
+          "id": 85835292,
+          "project_id": 1246106,
+          "name": "Single sign on",
+          "story_type": "feature",
+          "current_state": "unscheduled",
+          "requested_by_id": 253209,
+          "owner_ids": [],
+          "label_ids": [],
+          "follower_ids": [],
+          "created_at": 1420900580000,
+          "updated_at": 1420900580000,
+          "before_id": 85835214,
+          "after_id": 85834892,
+          "labels": []
+        },
+        "name": "Single sign on",
+        "story_type": "feature"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85835292,
+        "name": "Single sign on",
+        "story_type": "feature",
+        "url": "https://beta.pivotaltracker.com/story/show/85835292"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420900580000
+  }
+}

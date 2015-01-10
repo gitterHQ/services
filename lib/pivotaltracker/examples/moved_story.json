@@ -1,0 +1,50 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_move_activity",
+    "guid": "1246106_20",
+    "project_version": 20,
+    "message": "Wim Mostmans moved this story before 'Shopper should be able to recommend a product to a friend'",
+    "highlight": "moved",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "update",
+        "id": 85834818,
+        "original_values": {
+          "updated_at": 1420899898000,
+          "before_id": 85834814,
+          "after_id": 85834812
+        },
+        "new_values": {
+          "updated_at": 1420901758000,
+          "before_id": 85834816,
+          "after_id": 85834814
+        },
+        "name": "configure solr for full text searching",
+        "story_type": "chore"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85834818,
+        "name": "configure solr for full text searching",
+        "story_type": "chore",
+        "url": "https://www.pivotaltracker.com/story/show/85834818"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901758000
+  }
+}
