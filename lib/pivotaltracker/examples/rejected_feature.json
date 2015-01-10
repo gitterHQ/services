@@ -1,0 +1,69 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_update_activity",
+    "guid": "1246106_15",
+    "project_version": 15,
+    "message": "Wim Mostmans rejected this feature with comments: \"Doesn't seem to be working in IE7.\"",
+    "highlight": "rejected",
+    "changes": [
+      {
+        "kind": "comment",
+        "change_type": "create",
+        "id": 89151180,
+        "new_values": {
+          "id": 89151180,
+          "story_id": 85834816,
+          "text": "Doesn't seem to be working in IE7.",
+          "person_id": 253209,
+          "created_at": 1420901422000,
+          "updated_at": 1420901422000,
+          "file_attachment_ids": [],
+          "google_attachment_ids": [],
+          "file_attachments": [],
+          "google_attachments": []
+        }
+      },
+      {
+        "kind": "story",
+        "change_type": "update",
+        "id": 85834816,
+        "original_values": {
+          "current_state": "delivered",
+          "follower_ids": [],
+          "updated_at": 1420901350000
+        },
+        "new_values": {
+          "current_state": "rejected",
+          "follower_ids": [
+            253209
+          ],
+          "updated_at": 1420901422000
+        },
+        "name": "Shopper should be able to recommend a product to a friend",
+        "story_type": "feature"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85834816,
+        "name": "Shopper should be able to recommend a product to a friend",
+        "story_type": "feature",
+        "url": "https://www.pivotaltracker.com/story/show/85834816"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901422000
+  }
+}

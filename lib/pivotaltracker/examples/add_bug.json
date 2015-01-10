@@ -1,0 +1,60 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_create_activity",
+    "guid": "1246106_9",
+    "project_version": 9,
+    "message": "Wim Mostmans added this bug",
+    "highlight": "added",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "create",
+        "id": 85835312,
+        "new_values": {
+          "id": 85835312,
+          "project_id": 1246106,
+          "name": "Exception on login",
+          "description": "When a regular user tries to login he receives an exception.",
+          "story_type": "bug",
+          "current_state": "unscheduled",
+          "requested_by_id": 253209,
+          "owned_by_id": 253209,
+          "owner_ids": [
+            253209
+          ],
+          "label_ids": [],
+          "follower_ids": [],
+          "created_at": 1420900694000,
+          "updated_at": 1420900694000,
+          "before_id": 85835292,
+          "after_id": 85834892,
+          "labels": []
+        },
+        "name": "Exception on login",
+        "story_type": "bug"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85835312,
+        "name": "Exception on login",
+        "story_type": "bug",
+        "url": "https://www.pivotaltracker.com/story/show/85835312"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420900694000
+  }
+}

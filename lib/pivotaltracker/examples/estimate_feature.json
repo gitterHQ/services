@@ -1,0 +1,48 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_update_activity",
+    "guid": "1246106_19",
+    "project_version": 19,
+    "message": "Wim Mostmans estimated this feature as 2 points",
+    "highlight": "estimated",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "update",
+        "id": 85835292,
+        "original_values": {
+          "estimate": null,
+          "updated_at": 1420900580000
+        },
+        "new_values": {
+          "estimate": 2,
+          "updated_at": 1420901689000
+        },
+        "name": "Single sign on",
+        "story_type": "feature"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85835292,
+        "name": "Single sign on",
+        "story_type": "feature",
+        "url": "https://www.pivotaltracker.com/story/show/85835292"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901689000
+  }
+}

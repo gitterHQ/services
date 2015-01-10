@@ -1,0 +1,54 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_update_activity",
+    "guid": "1246106_17",
+    "project_version": 17,
+    "message": "Wim Mostmans accepted this release",
+    "highlight": "accepted",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "update",
+        "id": 85834822,
+        "original_values": {
+          "current_state": "unstarted",
+          "accepted_at": null,
+          "updated_at": 1420898944000,
+          "before_id": 85834824,
+          "after_id": 85834820
+        },
+        "new_values": {
+          "current_state": "accepted",
+          "accepted_at": 1420901567000,
+          "updated_at": 1420901567000,
+          "before_id": 85834808,
+          "after_id": 85834806
+        },
+        "name": "Initial demo to investors",
+        "story_type": "release"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85834822,
+        "name": "Initial demo to investors",
+        "story_type": "release",
+        "url": "https://www.pivotaltracker.com/story/show/85834822"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901567000
+  }
+}

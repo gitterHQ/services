@@ -1,0 +1,56 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_create_activity",
+    "guid": "1246106_11",
+    "project_version": 11,
+    "message": "Wim Mostmans added this release",
+    "highlight": "added",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "create",
+        "id": 85835342,
+        "new_values": {
+          "id": 85835342,
+          "project_id": 1246106,
+          "name": "1.4.3",
+          "story_type": "release",
+          "current_state": "unscheduled",
+          "requested_by_id": 253209,
+          "owner_ids": [],
+          "label_ids": [],
+          "follower_ids": [],
+          "created_at": 1420901136000,
+          "updated_at": 1420901136000,
+          "before_id": 85835336,
+          "after_id": 85834892,
+          "labels": []
+        },
+        "name": "1.4.3",
+        "story_type": "release"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85835342,
+        "name": "1.4.3",
+        "story_type": "release",
+        "url": "https://beta.pivotaltracker.com/story/show/85835342"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901136000
+  }
+}
