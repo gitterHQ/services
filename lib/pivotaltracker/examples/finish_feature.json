@@ -1,0 +1,48 @@
+{
+  "headers": {},
+  "body": {
+    "kind": "story_update_activity",
+    "guid": "1246106_13",
+    "project_version": 13,
+    "message": "Wim Mostmans finished this feature",
+    "highlight": "finished",
+    "changes": [
+      {
+        "kind": "story",
+        "change_type": "update",
+        "id": 85834816,
+        "original_values": {
+          "current_state": "started",
+          "updated_at": 1420901178000
+        },
+        "new_values": {
+          "current_state": "finished",
+          "updated_at": 1420901234000
+        },
+        "name": "Shopper should be able to recommend a product to a friend",
+        "story_type": "feature"
+      }
+    ],
+    "primary_resources": [
+      {
+        "kind": "story",
+        "id": 85834816,
+        "name": "Shopper should be able to recommend a product to a friend",
+        "story_type": "feature",
+        "url": "https://www.pivotaltracker.com/story/show/85834816"
+      }
+    ],
+    "project": {
+      "kind": "project",
+      "id": 1246106,
+      "name": "My Sample Project"
+    },
+    "performed_by": {
+      "kind": "person",
+      "id": 253209,
+      "name": "Wim Mostmans",
+      "initials": "WM"
+    },
+    "occurred_at": 1420901235000
+  }
+}
