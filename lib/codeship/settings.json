@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "id": "error",
+      "name": "Error",
+      "description": "Build error",
+      "selected": true
+    },
+    {
+      "id": "stopped",
+      "name": "Stopped",
+      "description": "Build stopped",
+      "selected": false
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "description": "Build success",
+      "selected": true
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Build testing",
+      "selected": true
+    },
+    {
+      "id": "waiting",
+      "name": "Waiting",
+      "description": "Build waiting",
+      "selected": false
+    }
+  ]
+}
