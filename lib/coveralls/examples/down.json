@@ -1,0 +1,15 @@
+{
+  "headers": {},
+  "body": {
+    "url": "https://coveralls.io/builds/2214355",
+    "commit_message": "Fixes #6",
+    "branch": "develop",
+    "committer_name": "alexfu",
+    "committer_email": "",
+    "commit_sha": "451260c90218735437acd3dc51dff169ada4040d",
+    "repo_name": "alexfu/SQLiteQueryBuilder",
+    "badge_url": "https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_99.svg",
+    "coverage_change": "-1.2",
+    "covered_percent": "98.6013986013986"
+  }
+}
