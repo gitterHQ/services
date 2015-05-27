@@ -1,0 +1,7 @@
+{
+  "headers": {},
+  "body": {
+    "message": "Coverage for [owner/repo](https://codecov.io/github/owner/repo?ref=master) on `master` is `[90%](https://codecov.io/github/owner/repo?ref=master)` via `[a51abac](https://github.com/owner/repo/commit/a51abac)`",
+    "coverage_change": "-1.2"
+  }
+}
