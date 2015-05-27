@@ -1,7 +1,14 @@
 {
   "headers": {},
   "body": {
-    "message": "Coverage for [owner/repo](https://codecov.io/github/owner/repo?ref=master) on `master` is `[90%](https://codecov.io/github/owner/repo?ref=master)` via `[a51abac](https://github.com/owner/repo/commit/a51abac)`",
-    "coverage_change": "+1.2"
+    "branch": "master",
+    "pr": null,
+    "commit": "b955f16919680d33521da9b25213bb7b3ad20a5a",
+    "commit_short": "b955f16",
+    "text": "increased",
+    "commit_url": "https://github.com/owner/repo/commit/b955f16919680d33521da9b25213bb7b3ad20a5a",
+    "codecov_url": "https://codecov.io/github/owner/repo?ref=b955f16919680d33521da9b25213bb7b3ad20a5a",
+    "coverage": "90",
+    "coverage_change": "1.2"
   }
 }
