@@ -1,0 +1,7 @@
+{
+  "headers": {},
+  "body": {
+    "message": "Hello full world",
+    "level": "info"
+  }
+}

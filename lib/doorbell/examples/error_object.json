@@ -1,0 +1,7 @@
+{
+  "headers": {},
+  "body": {
+    "message": "I AM ERROR",
+    "level": "error"
+  }
+}
