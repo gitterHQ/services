@@ -8,5 +8,5 @@ notifications:
       - YOUR_WEBHOOK_URL
     on_success: change  # options: [always|never|change] default: always
     on_failure: always  # options: [always|never|change] default: always
-    on_start: false     # default: false
+    on_start: never     # options: [always|never|change] default: always
 ```
