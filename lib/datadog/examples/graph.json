@@ -1,0 +1,22 @@
+{
+  "headers": {
+  },
+  "body": {
+    "username": "Datadog",
+    "icon_url": "https://slack.global.ssl.fastly.net/7bf4/img/services/datadog_128.png",
+    "attachments": [{
+      "title": "gitter.web.logged.error",
+      "text": "@slack-general check out this graph!",
+      "title_link": "https://app.datadoghq.com/dash/19627/gitter-processes?page=0&is_auto=false&from_ts=1444775885100&to_ts=1444948685100&tile_size=m&fullscreen=false&tile_focus=48778624",
+      "image_url": "https://p.datadoghq.com/snapshot/view/dd-snapshots-prod/org_9111/2015-10-15/195283d73a099e098580a4a98bd960f3e8070d3d.png",
+      "mrkdwn_in": ["text", "pretext", "fields"],
+      "fields": [{
+        "short": true,
+        "value": "Andrew Newdigate",
+        "title": "Sent By"
+      }],
+      "fallback": "gitter.web.logged.error"
+    }],
+    "channel": "#general"
+  }
+}
