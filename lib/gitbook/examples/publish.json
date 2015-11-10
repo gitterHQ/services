@@ -1,0 +1,65 @@
+{
+  "headers": {
+    "X-GitBook-Signature": "sha1=6c4b0869ba5c40f3174a20d5314a4f5109564019",
+    "X-GitBook-Event": "publish",
+    "X-GitBook-Delivery": "5641c75def892d03003fdac0"
+  },
+  "body": {
+    "payload": {
+      "book":{
+        "author":{
+          "urls":{
+            "avatar":"https://ek8whxe.cloudimg.io/s/width/220/https://www.gitbook.com/api/author/gitbookio/avatar?v=10.3.0",
+            "profile":"https://www.gitbook.com/@gitbookio"
+          },
+          "name":"GitBook",
+          "username":"gitbookio",
+          "type":"Organization"
+        },
+        "urls":{
+          "download":{
+            "pdf":"https://www.gitbook.com/download/pdf/book/gitbookio/documentation",
+            "mobi":"https://www.gitbook.com/download/mobi/book/gitbookio/documentation",
+            "epub":"https://www.gitbook.com/download/epub/book/gitbookio/documentation"
+          },
+          "subscribe":"https://www.gitbook.com/subscribe/book/gitbookio/documentation",
+          "read":"https://www.gitbook.com/read/book/gitbookio/documentation",
+          "homepage":"https://gitbookio.gitbooks.io/documentation/",
+          "access":"https://www.gitbook.com/book/gitbookio/documentation",
+          "git":"https://git.gitbook.com/gitbookio/documentation.git"
+        },
+        "cover":{
+          "small":"https://ek8whxe.cloudimg.io/s/width/150/https://www.gitbook.com/cover/book/gitbookio/documentation.jpg?build=1447151453100&v=10.3.0",
+          "large":"https://ek8whxe.cloudimg.io/s/cdn/x/https://www.gitbook.com/cover/book/gitbookio/documentation.jpg?build=1447151453100&v=10.3.0"
+        },
+        "github":{
+          "git":"https://github.com/GitbookIO/documentation.git",
+          "id":"GitbookIO/documentation"
+        },
+        "price":0,
+        "public":true,
+        "description":"Documentation for using GitBook and gitbook.com",
+        "title":"Documentation",
+        "name":"documentation",
+        "id":"gitbookio/documentation"
+      },
+      "build":{
+        "version":"f3e44ed86cbd814c33219ea0f16dc99c32dbd7df",
+        "branch":"webhooks",
+        "dates":{
+          "finished":"2015-11-10T10:30:53.044Z",
+          "created":"2015-11-10T10:30:40.568Z"
+        },
+        "author":{
+          "type":"User",
+          "username":"samypesse",
+          "name":"Samy Pessé",
+          "urls":{
+            "profile":"https://www.gitbook.com/@samypesse",
+            "avatar":"https://ek8whxe.cloudimg.io/s/width/220/https://www.gitbook.com/api/author/samypesse/avatar?v=10.3.0"
+          }
+        }
+      }
+    }
+  }
+}
