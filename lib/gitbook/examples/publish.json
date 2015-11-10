@@ -1,8 +1,8 @@
 {
   "headers": {
-    "X-GitBook-Signature": "sha1=6c4b0869ba5c40f3174a20d5314a4f5109564019",
-    "X-GitBook-Event": "publish",
-    "X-GitBook-Delivery": "5641c75def892d03003fdac0"
+    "x-gitbook-signature": "sha1=6c4b0869ba5c40f3174a20d5314a4f5109564019",
+    "x-gitbook-event": "publish",
+    "x-gitbook-delivery": "5641c75def892d03003fdac0"
   },
   "body": {
     "payload": {
