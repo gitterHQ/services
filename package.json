@@ -1,6 +1,6 @@
 {
   "name": "gitter-services",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "supported services for gitter.im",
   "private": true,
   "main": "index.js",
