@@ -1,0 +1,8 @@
+{
+  "headers": {},
+  "body": {
+    "icon": "frown",
+    "errorLevel": "error",
+    "message": "Drone [foo/bar](https://enterprise.github.com/foo/bar/commit/9f2849d5adf2aa47745e1b7b9f76f1fcca1ebdb3) (master) [failure](http://drone.foo.com/enterprise.github.com/foo/bar/master/9f2849d5adf2aa47745e1b7b9f76f1fcca1ebdb3) (9f2849d)"
+  }
+}
