@@ -1,0 +1,27 @@
+{
+  "body":
+  {
+    "type": "alert.new_errors",
+    "data": {
+      "errors": [
+      {
+        "message": "This is a test error",
+        "count": 1,
+        "firstSeen": "2016-01-21T08:08:41.5365562+00:00",
+        "trackJsUrl": "https://my.trackjs.com/messages/filtered?hash=c1a3a3a89b54fa3b&application=%28Default%29"
+      }
+      ]
+    }
+    },
+    "headers": {
+      "x-real-ip": "123.456.789.10",
+      "x-forwarded-for": "123.456.789.10",
+      "host": "iafqxjbmde.localtunnel.me",
+      "x-forwarded-proto": "https",
+      "x-nginx-proxy": "true",
+      "connection": "close",
+      "content-length": "244",
+      "content-type": "application/json; charset=utf-8"
+    }
+  }
+
