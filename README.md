@@ -36,36 +36,36 @@ If everything passes, then you are ready!
 
 * `index.js`: This module has to export the following:
   * `apiVersion`: (_number_) the major version of this api.
-  * `name`: (_string_) how you would like your service named to the user (e.g github's name is `GitHub`).
+  * `name`: (_string_) how you would like your service named to the user (e.g. github's name is `GitHub`).
   * `parse`: (_function_) the function called every time we receive an incoming webhook from your service. If it is an event that the user wants to see, then return a message object. If not, return something falsy.
     * has the signature `function(headers, body, settings)` where:
-      * `headers`: (_object_) the headers of the webhook POST request e.g `{ "content-type": "application/json", ... }`.
+      * `headers`: (_object_) the headers of the webhook POST request e.g. `{ "content-type": "application/json", ... }`.
       * `body`: (_object_) the body of the webhook POST request.
-      * `settings`: (_object_) the settings that have been picked by the user e.g `{ events: {"someId": true, ... } }`. `events` will be a map of the the event `id`'s that a user has picked.
+      * `settings`: (_object_) the settings that have been picked by the user e.g. `{ events: {"someId": true, ... } }`. `events` will be a map of the event `id`'s that a user has picked.
     * returns a message object with these properties:
-      * `message`: (_string_) the message do be displayed (in markdown) e.g `"Some *Amazing* event has occured"`.
-      * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g `"logo"`.
+      * `message`: (_string_) the message to be displayed (in markdown) e.g. `"Some *Amazing* event has occured"`.
+      * `icon`: (_string_) the name of an icon in the `icons` dir to display e.g. `"logo"`.
       * `errorLevel`: (_string_) either `"normal"` or `"error"`. Error messages get styled red, and so the `icon` that you pick for this message must be red too ([#e74c3c](http://www.colorhexa.com/e74c3c)).
 * `icons`: This directory contains all the png icons that can be used by this service. They must follow the following rules:
-  * each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
-  * there must be a logo icon (`logo.png` and `logo@2x.png`).
-  * icons must be either black and white, or [#e74c3c](http://www.colorhexa.com/e74c3c) and white (for error messages).
+  * Each icon must exist as both a 16x16 png and a 32x32 png (`name.png` and `name@2x.png` respectively).
+  * There must be a logo icon (`logo.png` and `logo@2x.png`).
+  * Icons must be either black and white, or [#e74c3c](http://www.colorhexa.com/e74c3c) and white (for error messages).
 * `instructions.md`: The instructions that will be displayed when someone needs to set up your service to emit webhooks.
-* `settings.json`: This represents the settings available to the user when creating an integration. At the moment, it's only list of events.
+* `settings.json`: This represents the settings available to the user when creating an integration. At the moment, it's only a list of events.
   Format is `{ "events": [event1, event2, ... ] }` where each event is an object that has these properties:
-  * `id`: (_string_) a unique id that will be passed into the `parse` function if selected e.g `"high_five"`.
-  * `name`: (_string_) a friendly name for your event e.g `"High Five"`.
-  * `description`: (_string_) an explanation of the event e.g `"Single clap made by two people"`.
+  * `id`: (_string_) a unique id that will be passed into the `parse` function if selected e.g. `"high_five"`.
+  * `name`: (_string_) a friendly name for your event e.g. `"High Five"`.
+  * `description`: (_string_) an explanation of the event e.g. `"Single clap made by two people"`.
   * `selected`: (_boolean_) whether or not this event option is enabled by default.
 * `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. You can use the playground for this. Again, rules:
-   * all examples must be in `json`.
-   * all examples must be in the format `{ headers: {...}, body: {...} }`.
+   * All examples must be in `json`.
+   * All examples must be in the format `{ headers: {...}, body: {...} }`.
 * `test`: directory of standard [mocha](https://mochajs.org/) tests. Cool people write tests. You _are_ cool, aren't you?
 
 ### Settings
 As shown above, settings available to the user are declared in a service's `settings.json`. These choices are then sent with every incoming webhook to that service's `parse` function. **It is up to the parse() function to decide if that hook is relevant to the users choices**.
 
-For example, if you have the following settings.json:
+For example, if you have the following `settings.json`:
 ```json
 {
   "events": [
@@ -85,7 +85,7 @@ For example, if you have the following settings.json:
 }
 ```
 
-Then if the user only wants to be notified of `kitten_purr` events and **not** `kitten_yawn` events, then the `parse(headers, body, settings)` function will be called with a `settings` object like this:
+Then if the user only wants to be notified of `kitten_purr` events and **not** `kitten_yawn` events, the `parse(headers, body, settings)` function will be called with a `settings` object like this:
 ```json
 {
   "events": {
@@ -142,14 +142,15 @@ Your `settings.json` needs to look like this:
       "id": "started",
       "name": "Started",
       "description": "When a build is started.",
-      "selected": false },
+      "selected": false
+    },
     {
       "id": "success",
       "name": "Success",
       "description":
       "When a build finishes successfully.",
       "selected": false
-      },
+    },
     {
       "id": "failure",
       "name": "Failure",
