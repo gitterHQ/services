@@ -1,0 +1,9 @@
+{
+  "body": {
+    "project_name": "ExampleProject/example-client (branchname)",
+    "stage_name": "Test",
+    "counter": 1,
+    "build_result": "Passed"
+  },
+  "headers": {}
+}
