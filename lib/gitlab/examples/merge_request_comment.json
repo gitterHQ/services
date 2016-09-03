@@ -1,0 +1,132 @@
+{
+  "headers" : {},
+  "body" : {
+    "object_kind": "note",
+    "user": {
+      "name": "Vishnu Bharathi",
+      "username": "scriptnull",
+      "avatar_url": "https://secure.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=80&d=identicon"
+    },
+    "project_id": 1568499,
+    "project": {
+      "name": "gitlab-for-gitter",
+      "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+      "web_url": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "git_http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git",
+      "namespace": "scriptnull",
+      "visibility_level": 20,
+      "path_with_namespace": "scriptnull/gitlab-for-gitter",
+      "default_branch": "master",
+      "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+      "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
+    },
+    "object_attributes": {
+      "id": 14921076,
+      "note": "This feature is not complete !",
+      "noteable_type": "MergeRequest",
+      "author_id": 187606,
+      "created_at": "2016-09-03 15:39:38 UTC",
+      "updated_at": "2016-09-03 15:39:38 UTC",
+      "project_id": 1568499,
+      "attachment": null,
+      "line_code": null,
+      "commit_id": "",
+      "noteable_id": 769497,
+      "st_diff": null,
+      "system": false,
+      "updated_by_id": null,
+      "type": null,
+      "position": null,
+      "original_position": null,
+      "resolved_at": null,
+      "resolved_by_id": null,
+      "discussion_id": "bd7c3789212c59e0afd3e91179e1ff802cb28cc4",
+      "original_discussion_id": null,
+      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/merge_requests/1#note_14921076"
+    },
+    "repository": {
+      "name": "gitlab-for-gitter",
+      "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+      "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter"
+    },
+    "merge_request": {
+      "id": 769497,
+      "target_branch": "master",
+      "source_branch": "feature_branch",
+      "source_project_id": 1568499,
+      "author_id": 187606,
+      "assignee_id": null,
+      "title": "adds new feature",
+      "created_at": "2016-08-24 19:50:06 UTC",
+      "updated_at": "2016-09-03 15:39:38 UTC",
+      "milestone_id": null,
+      "state": "closed",
+      "merge_status": "can_be_merged",
+      "target_project_id": 1568499,
+      "iid": 1,
+      "description": "",
+      "position": 0,
+      "locked_at": null,
+      "updated_by_id": 187606,
+      "merge_error": null,
+      "merge_params": {
+        "force_remove_source_branch": null
+      },
+      "merge_when_build_succeeds": false,
+      "merge_user_id": null,
+      "merge_commit_sha": null,
+      "deleted_at": null,
+      "approvals_before_merge": null,
+      "rebase_commit_sha": null,
+      "in_progress_merge_commit_sha": null,
+      "source": {
+        "name": "gitlab-for-gitter",
+        "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+        "web_url": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+        "avatar_url": null,
+        "git_ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "git_http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git",
+        "namespace": "scriptnull",
+        "visibility_level": 20,
+        "path_with_namespace": "scriptnull/gitlab-for-gitter",
+        "default_branch": "master",
+        "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+        "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
+      },
+      "target": {
+        "name": "gitlab-for-gitter",
+        "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+        "web_url": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+        "avatar_url": null,
+        "git_ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "git_http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git",
+        "namespace": "scriptnull",
+        "visibility_level": 20,
+        "path_with_namespace": "scriptnull/gitlab-for-gitter",
+        "default_branch": "master",
+        "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+        "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+        "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
+      },
+      "last_commit": {
+        "id": "ebea0bb4021451be60ac43319208780b791065c6",
+        "message": "adds new feature\n",
+        "timestamp": "2016-08-25T01:19:09+05:30",
+        "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/commit/ebea0bb4021451be60ac43319208780b791065c6",
+        "author": {
+          "name": "Vishnu Bharathi",
+          "email": "vishnubharathi04@gmail.com"
+        }
+      },
+      "work_in_progress": false
+    }
+  }
+}

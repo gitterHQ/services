@@ -1,0 +1,79 @@
+{
+  "headers" : {},
+  "body" : {
+    "object_kind": "note",
+    "user": {
+      "name": "Vishnu Bharathi",
+      "username": "scriptnull",
+      "avatar_url": "https://secure.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=80&d=identicon"
+    },
+    "project_id": 1568499,
+    "project": {
+      "name": "gitlab-for-gitter",
+      "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+      "web_url": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "git_http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git",
+      "namespace": "scriptnull",
+      "visibility_level": 20,
+      "path_with_namespace": "scriptnull/gitlab-for-gitter",
+      "default_branch": "master",
+      "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter",
+      "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "ssh_url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
+    },
+    "object_attributes": {
+      "id": 14921029,
+      "note": "Ok ! should work now.",
+      "noteable_type": "Issue",
+      "author_id": 187606,
+      "created_at": "2016-09-03 15:35:24 UTC",
+      "updated_at": "2016-09-03 15:35:24 UTC",
+      "project_id": 1568499,
+      "attachment": null,
+      "line_code": null,
+      "commit_id": "",
+      "noteable_id": 2834956,
+      "st_diff": null,
+      "system": false,
+      "updated_by_id": null,
+      "type": null,
+      "position": null,
+      "original_position": null,
+      "resolved_at": null,
+      "resolved_by_id": null,
+      "discussion_id": "428f0eee6da5c9e61d65e443eebcd0c8809d1a61",
+      "original_discussion_id": null,
+      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/issues/1#note_14921029"
+    },
+    "repository": {
+      "name": "gitlab-for-gitter",
+      "url": "git@gitlab.com:scriptnull/gitlab-for-gitter.git",
+      "description": "This is a testing repository used to carry out tests on gitlab service for gitter ( https://github.com/gitterHQ/services ) ",
+      "homepage": "https://gitlab.com/scriptnull/gitlab-for-gitter"
+    },
+    "issue": {
+      "id": 2834956,
+      "title": "Testing issue",
+      "assignee_id": 187606,
+      "author_id": 187606,
+      "project_id": 1568499,
+      "created_at": "2016-08-24 19:12:30 UTC",
+      "updated_at": "2016-09-03 15:35:24 UTC",
+      "position": 0,
+      "branch_name": null,
+      "description": "This is a test issue",
+      "milestone_id": null,
+      "state": "reopened",
+      "iid": 1,
+      "updated_by_id": 187606,
+      "weight": null,
+      "confidential": false,
+      "moved_to_id": null,
+      "deleted_at": null,
+      "due_date": null
+    }
+  }
+}
