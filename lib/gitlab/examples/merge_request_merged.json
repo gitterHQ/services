@@ -1,6 +1,6 @@
 {
-  "headers": {},
-  "body": {
+  "headers" : {},
+  "body" : {
     "object_kind": "merge_request",
     "user": {
       "name": "Vishnu Bharathi",
@@ -24,31 +24,31 @@
       "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
     },
     "object_attributes": {
-      "id": 814760,
+      "id": 769497,
       "target_branch": "master",
-      "source_branch": "remove_feature",
+      "source_branch": "feature_branch",
       "source_project_id": 1568499,
       "author_id": 187606,
       "assignee_id": null,
-      "title": "removes feature",
-      "created_at": "2016-09-03 18:24:31 UTC",
-      "updated_at": "2016-09-03 18:24:31 UTC",
+      "title": "adds new feature",
+      "created_at": "2016-08-24 19:50:06 UTC",
+      "updated_at": "2016-09-03 18:15:43 UTC",
       "milestone_id": null,
-      "state": "opened",
-      "merge_status": "unchecked",
+      "state": "merged",
+      "merge_status": "can_be_merged",
       "target_project_id": 1568499,
-      "iid": 2,
-      "description": "this merge request removes a feature.",
+      "iid": 1,
+      "description": "",
       "position": 0,
       "locked_at": null,
-      "updated_by_id": null,
+      "updated_by_id": 187606,
       "merge_error": null,
       "merge_params": {
         "force_remove_source_branch": null
       },
       "merge_when_build_succeeds": false,
       "merge_user_id": null,
-      "merge_commit_sha": null,
+      "merge_commit_sha": "4680a81e2386a8b9884186d0597834e4c0f1f977",
       "deleted_at": null,
       "approvals_before_merge": null,
       "rebase_commit_sha": null,
@@ -86,18 +86,18 @@
         "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
       },
       "last_commit": {
-        "id": "3420d97d0c7b680771542b7dd41df3185c527639",
-        "message": "removes feature\n",
-        "timestamp": "2016-09-03T23:53:19+05:30",
-        "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/commit/3420d97d0c7b680771542b7dd41df3185c527639",
+        "id": "ebea0bb4021451be60ac43319208780b791065c6",
+        "message": "adds new feature\n",
+        "timestamp": "2016-08-25T01:19:09+05:30",
+        "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/commit/ebea0bb4021451be60ac43319208780b791065c6",
         "author": {
           "name": "Vishnu Bharathi",
           "email": "vishnubharathi04@gmail.com"
         }
       },
       "work_in_progress": false,
-      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/merge_requests/2",
-      "action": "open"
+      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/merge_requests/1",
+      "action": "merge"
     },
     "repository": {
       "name": "gitlab-for-gitter",
