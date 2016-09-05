@@ -1,6 +1,6 @@
 {
-  "headers": {},
-  "body": {
+  "headers" : {},
+  "body" : {
     "object_kind": "issue",
     "user": {
       "name": "Vishnu Bharathi",
@@ -24,27 +24,27 @@
       "http_url": "https://gitlab.com/scriptnull/gitlab-for-gitter.git"
     },
     "object_attributes": {
-      "id": 2834956,
-      "title": "Testing issue",
+      "id": 2917679,
+      "title": "Issue to get payload",
       "assignee_id": 187606,
       "author_id": 187606,
       "project_id": 1568499,
-      "created_at": "2016-08-24 19:12:30 UTC",
-      "updated_at": "2016-09-03 17:43:49 UTC",
+      "created_at": "2016-09-03 17:12:45 UTC",
+      "updated_at": "2016-09-03 17:15:09 UTC",
       "position": 0,
       "branch_name": null,
-      "description": "This is a test issue",
+      "description": "This is a new issue to get payload for webhooks.",
       "milestone_id": null,
       "state": "reopened",
-      "iid": 1,
+      "iid": 2,
       "updated_by_id": 187606,
       "weight": null,
       "confidential": false,
       "moved_to_id": null,
       "deleted_at": null,
-      "due_date": null,
-      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/issues/1",
-      "action": "update"
+      "due_date": "2016-09-04",
+      "url": "https://gitlab.com/scriptnull/gitlab-for-gitter/issues/2",
+      "action": "reopen"
     },
     "repository": {
       "name": "gitlab-for-gitter",
