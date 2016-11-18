@@ -1,0 +1,7 @@
+{
+  "body": {
+    "status": "errored",
+    "message": "Your message goes here"
+  },
+  "headers": {}
+}

@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": "failed",
+      "name": "Build Failed",
+      "description": "Whenever a build failed.",
+      "selected": true
+    },
+    {
+      "id": "passed",
+      "name": "Build Passed",
+      "description": "Whenever a build passed.",
+      "selected": true
+    },
+    {
+      "id": "errored",
+      "name": "Build Errored",
+      "description": "Whenever a something is wrong.",
+      "selected": true
+    },
+    {
+      "id": "triggered",
+      "name": "Build Triggered",
+      "description": "Whenever a build triggered",
+      "selected": true
+    }
+  ]
+}
