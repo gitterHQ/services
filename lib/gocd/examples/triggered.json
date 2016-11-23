@@ -1,0 +1,7 @@
+{
+  "body": {
+    "status": "triggered",
+    "message": "Your message goes here"
+  },
+  "headers": {}
+}
