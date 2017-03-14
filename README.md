@@ -60,7 +60,7 @@ If everything passes, then you are ready!
 * `examples`: This directory contains examples to be used in your tests (and our sanity testing). You will need to intercept some hooks if you cant find any documented. You can use the playground for this. Again, rules:
    * all examples must be in `json`.
    * all examples must be in the format `{ headers: {...}, body: {...} }`.
-* `test`: directory of standard [mocha](http://visionmedia.github.io/mocha) tests. Cool people write tests. You _are_ cool, aren't you?
+* `test`: directory of standard [mocha](https://mochajs.org/) tests. Cool people write tests. You _are_ cool, aren't you?
 
 ### Settings
 As shown above, settings available to the user are declared in a service's `settings.json`. These choices are then sent with every incoming webhook to that service's `parse` function. **It is up to the parse() function to decide if that hook is relevant to the users choices**.
