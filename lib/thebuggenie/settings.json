@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "id": "issue_create",
+      "name": "Issue created",
+      "description": "Sent when an issue has been created",
+      "selected": true
+    },
+    {
+      "id": "issue_comment",
+      "name": "Comment posted",
+      "description": "Sent when a comment is posted on an issue",
+      "selected": true
+    }
+  ]
+}
